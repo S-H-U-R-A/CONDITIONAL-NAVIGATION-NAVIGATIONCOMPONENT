@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <!--START DESTINATION-->
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.navegaciontest.ui.main.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+
+    <!--LOGIN FRAGMENT-->
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.navegaciontest.ui.login.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" />
+
+    <!--PROFILE FRAGMENT - REQUIRE ACCESS-->
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.navegaciontest.ui.profile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+
+</navigation>
